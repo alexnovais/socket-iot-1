@@ -62,4 +62,4 @@ io.on('connection', (socket) => {
   }
 });
 
-console.log(`Running port ${port}`);
+console.log(`Rodando na porta: ${port}`);

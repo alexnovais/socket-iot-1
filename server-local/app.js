@@ -4,6 +4,8 @@ const five = require('johnny-five');
 
 const app = express();
 
+var PORT = process.env.PORT || 3012;
+
 app.use(bodyParser.urlencoded({
   extended: true,
 }));
@@ -34,6 +36,10 @@ app.post('/', (req, res, next) => {
 });
 
 
-app.listen(3012, () => {
-  console.log('Rodando na porta local: 3012');
+app.listen(PORT, () => {
+  console.log('Rodando na porta local: ' + PORT + '!');
 });
+
+//app.listen(PORT, function () {
+// console.log('Express listening on port ' + PORT + '!');
+//});
